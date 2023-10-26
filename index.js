@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI, {
 //request results will be in json format
 app.use(express.json());
 //auth route
-app.use('/auth', require('./routes/user'));
+app.use('/auth', require('./routes/auth'));
 
 //port set
 const PORT = process.env.PORT || 5000;
