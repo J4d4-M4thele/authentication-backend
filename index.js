@@ -24,14 +24,14 @@ app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 
 // Serve static assets (build folder) if in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static('client/public'));
-// get anything, load index.html file
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
-  });
-}
+// if (process.env.NODE_ENV === 'production') {
+//   // Set static folder
+//   app.use(express.static('client/public'));
+// // get anything, load index.html file
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'public', 'index.html'));
+//   });
+// }
 
 const PORT = process.env.PORT || 5000;
 
