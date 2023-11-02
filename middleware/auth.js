@@ -36,10 +36,10 @@ exports.requireLogin = (req, res, next) => {
             req.user = decode;
             next();
         } else {
-            return res.status(401).json({ error: "Unauthorized" });
+            return res.status(401).json({ message: "Unauthorized" });
         }
     } catch (err) {
         console.log("Authentication error:", err);
-        return res.status(401).json({ error: "Unauthorized" });
+        return res.status(401).json({ message: "Unauthorized" });
     }
 };
