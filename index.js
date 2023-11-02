@@ -13,7 +13,7 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false,
   })
-  .then(() => console.log("MongoDB is connected"))
+  .then(() => console.log("Server is successfully connected"))
   .catch((err) => console.log(err));
 
 app.use(cors());
